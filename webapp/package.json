@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dn": "dotnet serve --directory ../TestLib/bin/Release/net7.0/browser-wasm/AppBundle/ --port 4201 --mime .wasm=application/wasm --mime .js=text/javascript --mime .json=application/json"
   },
   "dependencies": {
     "react": "^18.2.0",
