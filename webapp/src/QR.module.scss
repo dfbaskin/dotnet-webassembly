@@ -3,12 +3,18 @@
   border: 1px solid #ddd;
   padding: 2rem;
 
+  display: flex;
+  justify-content: space-between;
+
   > label {
     display: block;
     margin: 1rem;
     > span {
       display: inline-block;
       width: 6rem;
+    }
+    > input {
+      width: 30rem;
     }
   }
 }
