@@ -1,28 +1,15 @@
-import { ChangeEvent, useMemo, useState } from "react";
-import styles from "./Demo.module.scss";
+import { useMemo, useState } from "react";
 
-declare global {
-  interface Window {
-    dotnetExports?: {
-      TestLib: {
-        SomeAPI: {
-          DoubleIt: (value: number) => number;
-        };
-      };
-    };
-  }
-}
+import styles from "./Demo.module.scss";
 
 export function Demo() {
   const [value, setValue] = useState<string>("");
 
   const doubled = useMemo(() => {
     const numValue = Number(value);
-    return isNaN(numValue)
-      ? 0
-      : globalThis.window.dotnetExports
-      ? globalThis.window.dotnetExports.TestLib.SomeAPI.DoubleIt(numValue)
-      : 0;
+    return isNaN(numValue) || !globalThis.window.dotnetExports
+      ? NaN
+      : globalThis.window.dotnetExports.TestLib.SomeAPI.DoubleIt(numValue);
   }, [value]);
 
   return (
@@ -38,7 +25,7 @@ export function Demo() {
       </label>
       <label>
         <span>Doubled:</span>
-        <input name="doubled" readOnly value={doubled} />
+        <input name="doubled" readOnly value={isNaN(doubled) ? "" : doubled} />
       </label>
     </div>
   );

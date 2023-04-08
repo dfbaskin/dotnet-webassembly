@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    dotnetInterface: {
+    dotnetExports?: {
       TestLib: {
         SomeAPI: {
           DoubleIt: (value: number) => number;
@@ -9,3 +9,5 @@ declare global {
     };
   }
 }
+
+export {};
