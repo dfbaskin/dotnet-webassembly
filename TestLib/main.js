@@ -3,6 +3,7 @@ import { dotnet } from "./dotnet.js";
 const { getAssemblyExports, getConfig } = await dotnet.create();
 
 let exports = await getAssemblyExports(getConfig().mainAssemblyName);
+globalThis.window.dotnetExports = exports;
 
 await dotnet.run();
 
