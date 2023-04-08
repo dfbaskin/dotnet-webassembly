@@ -1,0 +1,14 @@
+.qr {
+  margin-top: 4rem;
+  border: 1px solid #ddd;
+  padding: 2rem;
+
+  > label {
+    display: block;
+    margin: 1rem;
+    > span {
+      display: inline-block;
+      width: 6rem;
+    }
+  }
+}

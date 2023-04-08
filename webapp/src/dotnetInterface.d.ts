@@ -5,6 +5,9 @@ declare global {
         SomeAPI: {
           DoubleIt: (value: number) => number;
         };
+        QR: {
+          Generate: (text: string, pixelsPerBlock: number) => string;
+        };
       };
     };
   }

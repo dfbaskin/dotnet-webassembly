@@ -1,5 +1,6 @@
 import "./App.scss";
 import { Demo } from "./Demo";
+import { QR } from "./QR";
 
 export function App() {
   return (
@@ -9,6 +10,9 @@ export function App() {
       </header>
       <section>
         <Demo />
+      </section>
+      <section>
+        <QR />
       </section>
     </div>
   );
