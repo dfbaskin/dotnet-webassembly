@@ -1,4 +1,5 @@
 import "./App.scss";
+import { Demo } from "./Demo";
 
 export function App() {
   return (
@@ -6,6 +7,9 @@ export function App() {
       <header>
         <h1>.NET / WebAssembly Example</h1>
       </header>
+      <section>
+        <Demo />
+      </section>
     </div>
   );
 }
