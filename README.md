@@ -68,3 +68,14 @@ To Build:
 
   `cargo test`
 
+## Example.ConsoleApp
+
+This is a .NET console application that runs that calls the `rust_component` API.
+
+To Run:
+
+- Navigate to the `Example.ConsoleApp` directory.
+
+- Build and run the app.
+
+  `dotnet run`
