@@ -12,7 +12,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="../rust_component/target/debug/rust_component.dll">
+    <Content
+      Include="../rust_component/target/debug/rust_component.dll"
+      Condition="$([MSBuild]::IsOSPlatform('Windows'))"
+    >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content
+      Include="../rust_component/target/debug/librust_component.so"
+      Condition="$([MSBuild]::IsOSPlatform('Linux'))"
+    >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content
+      Include="../rust_component/target/debug/librust_component.dylib"
+      Condition="$([MSBuild]::IsOSPlatform('OSX'))"
+    >
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
