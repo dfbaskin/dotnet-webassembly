@@ -24,7 +24,7 @@ This is a library that will be compiled into WebAssembly and then loaded into a 
 
 (This code was inspired by this project: https://github.com/maraf/dotnet-wasm-react)
 
-To Run:
+To Build:
 
 - Navigate to the `TestLib` path.
 
@@ -51,3 +51,20 @@ To Run:
 - Run the web application at http://localhost:4200/
 
   `npm run dev`
+
+## rust_component
+
+This is a simple Rust component that is compiled into WebAssembly.
+
+To Build:
+
+- Navigate to the `rust_component` path.
+
+- Build the component
+
+  `cargo build`
+
+- Compile the component into WebAssembly (using [Interoptopus](https://github.com/ralfbiedert/interoptopus#readme))
+
+  `cargo test`
+
