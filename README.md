@@ -20,7 +20,7 @@ Prerequisites:
 
 ## TestLib
 
-This is a library that will be compiled into WebAssembly and then loaded into a browser page. It exposes an API, a simple math calculation and a function that encodes text into a [QR Code](https://github.com/codebude/QRCoder).
+This is a .NET assembly that will be compiled into WebAssembly and then loaded into a browser page. It exposes an API, a simple math calculation and a function that encodes text into a [QR Code](https://github.com/codebude/QRCoder).
 
 (This code was inspired by this project: https://github.com/maraf/dotnet-wasm-react)
 
@@ -70,7 +70,7 @@ To Build:
 
 ## Example.ConsoleApp
 
-This is a .NET console application that runs that calls the `rust_component` API.
+This is a .NET console application that loads and calls the `rust_component` API.
 
 To Run:
 
